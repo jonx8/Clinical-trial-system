@@ -1,0 +1,21 @@
+[tool.poetry]
+name = "clinical-trial-system"
+version = "0.1.0"
+description = "Clinical trial management system"
+authors = ["Andrei Malykh <andrei.malykh.0@gmail.com>"]
+readme = "README.md"
+packages = [
+    { include = "app" }
+]
+
+[tool.poetry.dependencies]
+python = "^3.12"
+fastapi = "^0.117.1"
+uvicorn = "^0.37.0"
+sqlalchemy = "^2.0.23"
+poetry-core = "^2.2.1"
+psycopg2-binary = "^2.9.10"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"

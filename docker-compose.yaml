@@ -1,4 +1,22 @@
 services:
+  server:
+    image: clinical-trial-system-server
+    container_name: clinical-trial-system-server
+    build: .
+    environment:
+      DB_HOST: db
+      DB_PORT: 5432
+      DB_NAME: clinical_trials
+      DB_USER: admin
+      DB_PASSWORD: password
+    ports:
+      - "8080:8000"
+    depends_on:
+      - db
+    restart: on-failure
+    networks:
+      clinical-trial-system:
+
   db:
     image: postgres:15
     environment:

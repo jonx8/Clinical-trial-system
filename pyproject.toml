@@ -3,7 +3,6 @@ name = "clinical-trial-system"
 version = "0.1.0"
 description = "Clinical trial management system"
 authors = ["Andrei Malykh <andrei.malykh.0@gmail.com>"]
-readme = "README.md"
 packages = [
     { include = "app" }
 ]

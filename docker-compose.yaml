@@ -1,14 +1,22 @@
 services:
-  postgres:
+  db:
     image: postgres:15
     environment:
       POSTGRES_DB: clinical_trials
       POSTGRES_USER: admin
       POSTGRES_PASSWORD: password
+    restart: on-failure
     ports:
       - "5432:5432"
     volumes:
       - postgres_data:/var/lib/postgresql/data
+    networks:
+      - clinical-trial-system
 
 volumes:
   postgres_data:
+
+networks:
+  clinical-trial-system:
+    name: clinical-trial-system
+    driver: bridge

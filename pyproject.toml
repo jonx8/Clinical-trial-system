@@ -15,6 +15,8 @@ uvicorn = "^0.37.0"
 sqlalchemy = "^2.0.23"
 poetry-core = "^2.2.1"
 psycopg2-binary = "^2.9.10"
+asyncpg = "^0.30.0"
+email-validator = "^2.3.0"
 
 [build-system]
 requires = ["poetry-core"]
